@@ -5,6 +5,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table，tr,
+      td,
+      div,
+      thead {
+        border: 1px dotted rgb(25, 9, 243);
+        border-collapse: separate;
+        font-style: oblique;
+        font-family: Arial, Helvetica, sans-serif;
+        font-variant: initial;
+        color: rgb(243, 7, 7);
+        padding: 4px;
+        margin: 4px;
+        font-size: 1.2rem;
+      }
+      .table td {
+        width: 33%;
+      }
+      p {
+        font-size: inherit;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <input type="button" value="在线翻译" onclick="fanyi()" />
+
+    <table class="table">
+      <tr>
+        <td>
+          You are running Vue in development mode. Make sure to turn on
+          production mode when deploying for production. See more tips at
+          https://vuejs.org/guide/deployment.html
+        </td>
+        <td>
+          您在开发模式下运行Vue.确保在部署生产时，打开生产模式。更多提示请访问
+        </td>
+        <td>
+          {"recursive":递归},{"force":强制},{"initial":最初的}{"tip":顶端}，{"turn
+          on":打开}，{"deploying for",部署用于}，{"development
+          mode":开发模式}，{"production mode":生产模式}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Live reload enabled. vue.js:8649 Download the Vue Devtools extension
+          for a better development experience:
+          https://github.com/vuejs/vue-devtools
+        </td>
+        <td>
+          已启用实时重新加载。vue.js:8649 下载Vue
+          Devtools扩展以获得更好的开发体验
+        </td>
+        <td></td>
+      </tr>
+    </table>
+    <hr />
+    <pre>
+        <div>
+            <p> 内容有：字体、文本、背景、位置、边框、列表等等
+                一、修饰字体的属性
+                font-family 字体族(Times、serif等)
+                font-size 字体大小（可用绝对大小、相对大小、长度、百分比等）
+                font-style 字体风格（normal\italic斜体\oblique倾斜）
+                font-Weight 字体加粗（nomal\bold\bolder\lighter等）
+                font-Variant 字体变形（normal\small-caps小型大写字母）
+                或者font：[<字体风格>空格<字体变形>||<字体加粗>]？<字体大小>[/<行高>]？<字体族科>
+                p{
+                font:italic bold 20px times,serif
+                }
+                
+                二、CSS中常见的控制文本的属性
+                letter-spacing 字母间隔（必须符合长度格式，可使用负值）
+                word-spacing 文字间隔（同上）
+                text-decoration 文字修饰（underline-下划线\overline上划线、line-through删除线、blink闪烁、默认为无）：去掉a标签设置的链接中默认的下划线-a{text-decoration：none;}
+                text-align 横向排列（left\right\center）
+                text-indent 缩进（必须是一个长度或者百分比，如果是百分比，则以上级元素的宽度而定）
+                text-transform （可以改变字体的大小写）
+                line-height 行高（在控制文本基线之间的间隔的值，当值为数字时，行高为元素字体大小设置的量与该数字想乘；百分比的值是相对于元素字体的大小而定。不能有负值）
+                
+                三、常见的控制背景的属性
+                background-color（transparent透明）
+                background-image
+                background-repeat（repeat\repeat-x\repeat-y\no-repeat）
+                background-attachment 背景附件（scroll滚动、fixed固定）
+                background-position
+                background:<背景颜色>空格<背景图像>空格<背景重复>||<背景附件>||<背景位置>
+                文本在左对齐了的背景图片后进行缩进：padding-left：18px;
+                
+                四、边框属性
+                任何元素（标签）都可设置边框边框属性是用于设置某个元素边框的风格、宽度、颜色的略写。并且可一起设置4边的边框，也可对上、右、下、左边框单独设置。
+                
+                1、边框风格属性：border-style:none(无边框) dotted（点线式） dashed（破折线式） solid(直线式) double(双线式) groove(槽线式) ridge(脊线式) inset(内嵌效果) outset(凸起效果)；
+                
+                4条边框一起设置时，按照上、右、下、左的顺序。
+                
+                当单独设置时：border-top-style:solid;
+                border-rightstyle:solid;
+                border-bottom-style:solid;
+                border-left-style:solid;
+                
+                2、边框宽度属性：border-width:1px 2px 3px 4px;
+                等价于：border-top-width:1px;
+                border-right-width:2px;
+                border-bottom-width:3px;
+                border-left-width:4px;
+                
+                3、边框颜色：border-color:
+                4、也可以直接用border:3px solid green
+                5、鼠标光标属性：Cursor:default hand pointer wait help move(可用手册查找)
+                list-style-position  list-style-image list-style-type
+                        </p>
+        </div>
+        
+    </pre>
+    <table>
+      <thead>
+        <th>常见元素有哪些</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>块级元素Block-level Elements</td>
+          <td>div</td>
+          <td>ul,ol,dl</td>
+          <td>p,h1...h6,</td>
+          <td>table,form</td>
+          <td>blockquote,address</td>
+        </tr>
+        <tr>
+          <td>inline元素</td>
+          <td>a,i,strong,</td>
+          <td>span,label，</td>
+        </tr>
+        <tr>
+          <td>inline-block元素</td>
+          <td>img</td>
+          <td>input</td>
+        </tr>
+      </tbody>
+      <tfooter>
+        <tr>
+          <td colspan="3" style="text-align: center">常见标签和分类</td>
+        </tr>
+      </tfooter>
+    </table>
+    <ul>
+      <li>git config --global --list =》查看当前用户配置信息</li>
+      <li>git config --global user.name "user"=>设置用户名</li>
+      <li>git config --global user.email "user@163.com"=》设置用户邮箱</li>
+      <li></li>
+      <li>ssh-keygen -t rsa {enter递归，生成公钥}</li>
+      <li>cat ~/.ssh/id_rsa.pub {获取}</li>
+      <li>配置（略）</li>
+      <li>ssh -T git@gitee.com</li>
+      <li>
+        <ul>
+          <li>git init</li>
+          <li>git add .</li>
+          <li>git commit -m "commit comment"</li>
+          <li>git status</li>
+          <li>git log</li>
+          <li>git reset commitID --hard</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>git branch</li>
+          <li>git branch name1</li>
+          <li>git checkout name2</li>
+          <li>touch file.txt</li>
+          <li>git add .</li>
+          <li>git commit -m "commit comment"</li>
+          <li>git -log 精简show</li>
+          <li>git checkout master</li>
+          <li>git merge name2 合并name2到 master</li>
+          <li>git branch -d name2 删除 name2</li>
+          <li>git -log</li>
+          <li>
+            <ul>
+              <li>git remote add [远端名称] [仓库路径]</li>
+              <li>git remote {查看远程仓库}</li>
+              <li>
+                -f表示强制覆盖 --set-upstream
+                推送到远端仓库的同时并且和远端分支建立关联关系
+              </li>
+              <li></li>
+              <li>
+                命令：git push -f --set-upstream [远端名称
+                [本地分支名][远端分支名]]
+              </li>
+              <li>如果远程分支名和本地分支名相同，可以只写本地分支</li>
+
+              <li>git push --set-upstream origin master</li>
+              <li>git push origin master</li>
+              <li>查看关联关系 git branch -vv</li>
+              <li></li>
+              <li>
+                克隆 git clone [仓库路径] [本地目录]
+                {本地目录可以省略，会自动生成一个}
+              </li>
+              <li>
+                <ul>
+                  <li>抓取 就是将更新都抓到本地不会合并 git fetch</li>
+                  <li>抓取指定 git fetch [remote name][branch name]</li>
+                  <li>拉取 就是抓取+合并 git pull = fetch+merge</li>
+                  <li>拉取指定 git pull [remote name][branch name]</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <script>
+      function fanyi() {
+        window.open("https://dict.cnki.net/index");
+      }
+    </script>
+  </body>
 </html>
